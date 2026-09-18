@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashif Aziz | Revenue Cycle Specialist & Data Analyst</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-link {
+            color: #ccc !important;
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #fff !important;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: radial-gradient(ellipse at 20% 50%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 50%, rgba(118, 75, 162, 0.15) 0%, transparent 50%);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #aaa;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-gradient:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            color: #fff;
+        }
+
+        .btn-outline-gradient {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #667eea;
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline-gradient:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-color: transparent;
+            transform: translateY(-3px);
+            color: #fff;
+        }
+
+        /* Hero Image / Portrait */
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image .avatar {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+            padding: 6px; /* Gradient ring ke liye */
+        }
+
+        .hero-image .avatar .profile-pic {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top; /* Face ko center aur top par rakhne ke liye */
+            border: 4px solid #0a0a0a; /* Dark border */
+        }
+
+        .hero-image .avatar::before {
+            content: '';
+            position: absolute;
+            inset: -15px;
+            border-radius: 50%;
+            border: 2px dashed rgba(102, 126, 234, 0.4);
+            animation: spin 20s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 60px;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .about-card:hover {
+            border-color: rgba(102, 126, 234, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .about-card i {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .about-card h4 {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .about-card p {
+            color: #999;
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        .skill-item {
+            margin-bottom: 30px;
+        }
+
+        .skill-item .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill-bar .skill-progress {
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 0;
+            transition: width 1.5s ease;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.15);
+            color: #667eea;
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin: 5px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #667eea, #764ba2);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid #0a0a0a;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+        }
+
+        .timeline-item .date {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item h4 {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .company {
+            color: #aaa;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item ul {
+            color: #999;
+            padding-left: 20px;
+        }
+
+        .timeline-item ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Portfolio Cards */
+        .portfolio-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .portfolio-card .card-img {
+            height: 150px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .portfolio-card .card-body {
+            padding: 25px;
+        }
+
+        .portfolio-card .card-body h5 {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-card .card-body p {
+            color: #999;
+            font-size: 0.95rem;
+        }
+
+        /* Education & Certification Cards */
+        .edu-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .edu-card:hover {
+            border-color: rgba(102, 126, 234, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .edu-card i {
+            font-size: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .edu-card h5 {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .edu-card p {
+            color: #999;
+            margin-bottom: 5px;
+        }
+
+        .edu-card .date {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .contact-form .form-control {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #fff;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form .form-control:focus {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+            color: #fff;
+        }
+
+        .contact-form .form-control::placeholder {
+            color: #666;
+        }
+
+        .contact-form textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .contact-info-item .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .contact-info-item .text h6 {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .contact-info-item .text p {
+            margin: 0;
+            color: #999;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            color: #666;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            transform: translateY(-3px);
+            border-color: transparent;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-image .avatar {
+                width: 250px;
+                height: 250px;
+                margin-top: 40px;
+            }
+
+            .hero {
+                padding-top: 100px;
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin: 0 auto 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-image .avatar {
+                width: 200px;
+                height: 200px;
+            }
+
+            .about-card, .edu-card {
+                padding: 25px;
+            }
+        }
+
+        /* Scroll animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Kashif Aziz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1>Hi, I'm <span>Kashif Aziz</span><br>Revenue Cycle Specialist & Data Analyst</h1>
+                    <p>Detail-oriented professional with 3+ years of experience in healthcare operations, revenue cycle management, and billing audits. Skilled in data analytics and business intelligence.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#experience" class="btn-gradient">View My Experience</a>
+                        <a href="#contact" class="btn-outline-gradient">Contact Me</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-image">
+                    <div class="avatar">
+                        <!-- Yahan apni edited image ka path dein -->
+                        <img src="profile.png" alt="Kashif Aziz" class="profile-pic">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About <span>Me</span></h2>
+            <p class="section-subtitle fade-in">Get to know me better</p>
+            <div class="row g-4">
+                <div class="col-md-4 fade-in">
+                    <div class="about-card text-center">
+                        <i class="fas fa-briefcase"></i>
+                        <h4>Revenue Cycle Management</h4>
+                        <p>3+ years of progressive experience in healthcare operations, billing audits, and claim discrepancy resolution. Proven expertise in HIPAA compliance and quality assurance.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="about-card text-center">
+                        <i class="fas fa-chart-bar"></i>
+                        <h4>Data Analytics & BI</h4>
+                        <p>Certified in Data Analytics and Business Intelligence from DigiSkills. Skilled in Excel reporting, financial analysis, and process improvement.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="about-card text-center">
+                        <i class="fas fa-users"></i>
+                        <h4>Team Leadership</h4>
+                        <p>Adept at leading cross-functional teams, supporting account management, and serving as a backup lead to ensure seamless client operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="background: rgba(255,255,255,0.01);">
+        <div class="container">
+            <h2 class="section-title fade-in">My <span>Skills</span></h2>
+            <p class="section-subtitle fade-in">Professional & Technical Expertise</p>
+            <div class="row">
+                <div class="col-lg-6 fade-in">
+                    <h5 class="mb-4 text-center">Core Competencies</h5>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Data Analysis</span><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Quality Assurance</span><span>95%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="95"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Financial Analysis</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Reporting (Excel)</span><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Problem Solving</span><span>88%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 fade-in">
+                    <h5 class="mb-4 text-center">Software & Tools</h5>
+                    <div class="text-center">
+                        <span class="skill-tag">WebSoft</span>
+                        <span class="skill-tag">TalkEHR</span>
+                        <span class="skill-tag">CareCloud</span>
+                        <span class="skill-tag">Intergy</span>
+                        <span class="skill-tag">Vertex</span>
+                        <span class="skill-tag">Arrow</span>
+                        <span class="skill-tag">Experity</span>
+                        <span class="skill-tag">QuickBooks</span>
+                        <span class="skill-tag">MS Office</span>
+                        <span class="skill-tag">Data Analytics & BI</span>
+                        <span class="skill-tag">AI Using Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title fade-in">Work <span>Experience</span></h2>
+            <p class="section-subtitle fade-in">My professional journey</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 fade-in">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="date">Oct 2025 – Current</div>
+                            <h4>Account Manager OPS</h4>
+                            <div class="company">MTBC CareCloud</div>
+                            <ul>
+                                <li>Ensured adherence to HIPAA regulations and internal quality standards across all billing processes.</li>
+                                <li>Handle inbound and outbound calls with Medical Insurance companies.</li>
+                                <li>Communicate with insurance companies all types of claim-related queries and denial management.</li>
+                                <li>Handle patient's eligibility, benefits, and authorization verification project.</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="date">Oct 2024 – Oct 2025</div>
+                            <h4>Quality Assurance & Audit Executive</h4>
+                            <div class="company">MTBC CareCloud</div>
+                            <ul>
+                                <li>Conducted detailed audits of medical claims, charge entries, and payment postings to ensure accuracy and compliance.</li>
+                                <li>Collaborated with billing, coding, and AR teams to resolve complex issues and streamline workflow processes.</li>
+                                <li>Identified billing errors and discrepancies, leading to reduced claim denials and improved first-pass resolution rates.</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="date">July 2022 – Oct 2024</div>
+                            <h4>Account Manager OPS</h4>
+                            <div class="company">MTBC CareCloud</div>
+                            <ul>
+                                <li>Managed client communications through email, ensuring timely responses and resolution of queries.</li>
+                                <li>Prepared, analyzed, and submitted operational and billing reports for internal teams and clients.</li>
+                                <li>Coordinated and assigned daily work tasks to team members, ensuring deadlines and quality standards were met.</li>
+                                <li>Acted as backup lead for account management operations, supporting workflow continuity and decision-making.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Expertise Section -->
+    <section id="portfolio" style="background: rgba(255,255,255,0.01);">
+        <div class="container">
+            <h2 class="section-title fade-in">My <span>Expertise</span></h2>
+            <p class="section-subtitle fade-in">Key areas of professional strength</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="portfolio-card">
+                        <div class="card-img"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <div class="card-body">
+                            <h5>Claim Audits & Compliance</h5>
+                            <p>Detailed audits of medical claims and payment postings to ensure accuracy and HIPAA compliance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="portfolio-card">
+                        <div class="card-img"><i class="fas fa-phone-volume"></i></div>
+                        <div class="card-body">
+                            <h5>Denial Management</h5>
+                            <p>Handling inbound/outbound calls with insurance companies for claim queries and denial resolution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="portfolio-card">
+                        <div class="card-img"><i class="fas fa-users-cog"></i></div>
+                        <div class="card-body">
+                            <h5>Team Coordination</h5>
+                            <p>Assigning daily tasks, ensuring deadlines, and acting as backup lead for seamless operations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="portfolio-card">
+                        <div class="card-img"><i class="fas fa-chart-pie"></i></div>
+                        <div class="card-body">
+                            <h5>Data Reporting</h5>
+                            <p>Preparing and analyzing operational and billing reports using Excel and BI tools.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="portfolio-card">
+                        <div class="card-img"><i class="fas fa-handshake"></i></div>
+                        <div class="card-body">
+                            <h5>Client Communication</h5>
+                            <p>Managing client communications via email, ensuring timely responses and query resolution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="portfolio-card">
+                        <div class="card-img"><i class="fas fa-cogs"></i></div>
+                        <div class="card-body">
+                            <h5>Process Improvement</h5>
+                            <p>Identifying billing errors and streamlining workflows to improve first-pass resolution rates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title fade-in">My <span>Education</span></h2>
+            <p class="section-subtitle fade-in">Academic background</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 fade-in">
+                    <div class="edu-card text-center">
+                        <i class="fas fa-university"></i>
+                        <h5>B.Com</h5>
+                        <p>University of Azad Jammu & Kashmir, Muzaffarabad</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="edu-card text-center">
+                        <i class="fas fa-school"></i>
+                        <h5>F.Sc</h5>
+                        <p>Mirpur Board, AJK</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="edu-card text-center">
+                        <i class="fas fa-book"></i>
+                        <h5>Matric</h5>
+                        <p>Mirpur Board, AJK</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" style="background: rgba(255,255,255,0.01);">
+        <div class="container">
+            <h2 class="section-title fade-in">My <span>Certifications</span></h2>
+            <p class="section-subtitle fade-in">Professional development courses</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 fade-in">
+                    <div class="edu-card">
+                        <i class="fas fa-robot"></i>
+                        <h5>Artificial Intelligence Using Python</h5>
+                        <p>DigiSkills Training Program (DSTP 3.0 – Batch 03)</p>
+                        <div class="date">Apr 2026 – Jul 2026</div>
+                    </div>
+                </div>
+                <div class="col-md-6 fade-in">
+                    <div class="edu-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h5>Data Analytics & Business Intelligence</h5>
+                        <p>DigiSkills Training Program (DSTP 3.0 – Batch 01)</p>
+                        <div class="date">Aug 2025 – Nov 2025</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Contact <span>Me</span></h2>
+            <p class="section-subtitle fade-in">Let's work together</p>
+            <div class="row g-4">
+                <div class="col-lg-5 fade-in">
+                    <div class="contact-info-item">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div class="text">
+                            <h6>Email</h6>
+                            <p>kashifaziz392@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon"><i class="fas fa-phone"></i></div>
+                        <div class="text">
+                            <h6>Phone</h6>
+                            <p>+92344-9706327</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="text">
+                            <h6>Location</h6>
+                            <p>Hudda Bari Bagh, AJK, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="text">
+                            <h6>LinkedIn</h6>
+                            <p><a href="https://www.linkedin.com/in/kashif-aziz497" target="_blank" style="color: #667eea; text-decoration: none;">www.linkedin.com/in/kashif-aziz497</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 fade-in">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn-gradient w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/kashif-aziz497" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:kashifaziz392@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+923449706327"><i class="fas fa-phone"></i></a>
+            </div>
+            <p>&copy; 2024 Kashif Aziz. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.padding = '10px 0';
+                navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+            } else {
+                navbar.style.padding = '15px 0';
+                navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+            }
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Skill bar animation
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bars = entry.target.querySelectorAll('.skill-progress');
+                    bars.forEach(bar => {
+                        const width = bar.getAttribute('data-width');
+                        setTimeout(() => {
+                            bar.style.width = width + '%';
+                        }, 200);
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const skillsSection = document.querySelector('#skills');
+        if (skillsSection) skillObserver.observe(skillsSection);
+
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent successfully.');
+            this.reset();
+        });
+
+        // Navbar collapse on mobile click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbar = document.getElementById('navMenu');
+                if (navbar.classList.contains('show')) {
+                    new bootstrap.Collapse(navbar).hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
