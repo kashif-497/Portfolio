@@ -1242,11 +1242,11 @@
                     alert("Thank you! Your message has been forwarded to Kashif. He will get in touch with you shortly.");
                     form.reset();
                 } else {
-                    alert("Error: " + (data.message || "Message send nahi ho saka. Dobara koshish karein."));
+                    alert("Error: " + (data.message || "The message could not be sent. Please try again."));
                 }
 
             } catch (error) {
-                alert("Kuch masla ho gaya. Internet connection check karein aur dobara try karein.");
+                alert("Something went wrong. Please check your internet connection and try again.");
             } finally {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
